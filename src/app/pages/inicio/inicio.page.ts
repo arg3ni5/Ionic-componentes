@@ -44,6 +44,11 @@ export class InicioPage implements OnInit {
       icon: 'checkbox-outline',
       name: 'Checkbox',
       redirectTo: '/check'
+    },
+    {
+      icon: 'calendar-outline',
+      name: 'Date Time',
+      redirectTo: '/date-time'
     }
   ];
 
