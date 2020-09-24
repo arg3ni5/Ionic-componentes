@@ -11,7 +11,9 @@
               [routerLink]="c.redirectTo"
               detail>
       <ion-icon [name]="c.icon" slot="start" color="primary"></ion-icon>
-      {{ c.name }}
+      <span class="ion-text-capitalize">
+        {{ c.name }}  
+      </span>
     </ion-item>
   </ion-list>
 
