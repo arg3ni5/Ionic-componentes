@@ -8,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class DateTimePage implements OnInit {
   
   birthday: Date = new Date();
-
+  customYearsValues = [1991,2000,2009,2010,2020];
+  customPickerOptions = {
+    buttons: [
+      {text:"Hola", handler:(event) =>{
+        console.log(event);        
+      }},
+      {text:"Mundo"}]
+  }
   constructor() { }
 
   ngOnInit() {
