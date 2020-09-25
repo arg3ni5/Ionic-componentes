@@ -6,21 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-reorder.page.scss'],
 })
 export class ListReorderPage implements OnInit {
-  personajes : string[] = ['Aquaman','Superman','Mujer Maravilla', 'Batman', 'Flash'];
+  personajes: string[] = ['Aquaman', 'Superman', 'Mujer Maravilla', 'Batman', 'Flash'];
+  toogle: boolean = false;
   constructor() { }
 
   ngOnInit() {
   }
 
-  doReorder(event:any){
+  doReorder(event: any) {
     console.log(event);
 
-    const itemMover = this.personajes.splice(event.detail.from,1)[0];
-    this.personajes.splice(event.detail.to,0, itemMover);
+    const itemMover = this.personajes.splice(event.detail.from, 1)[0];
+    this.personajes.splice(event.detail.to, 0, itemMover);
 
     event.detail.complete();
     console.log(this.personajes);
-    
+
   }
 
 }
