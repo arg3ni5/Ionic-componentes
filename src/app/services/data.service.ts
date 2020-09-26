@@ -8,10 +8,13 @@ import { Componente } from '../interfaces/Componente';
 export class DataService {
 
   constructor(private http: HttpClient) { }
-  getUsuarios(){
+  getUsuarios() {
     return this.http.get('https://jsonplaceholder.typicode.com/users');
   }
-  getMenuOpts(){
+  getAlbumes() {
+    return this.http.get<any[]>('https://jsonplaceholder.typicode.com/albums');
+  }
+  getMenuOpts() {
     return this.http.get<Componente[]>('/assets/data/menu-opts.json');
   }
 }
