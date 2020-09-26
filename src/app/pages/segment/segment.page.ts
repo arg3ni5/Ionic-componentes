@@ -9,6 +9,7 @@ import { DataService } from '../../services/data.service';
 })
 export class SegmentPage implements OnInit {
   superHeroes: Observable<any>;
+  publisher: string;
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
@@ -16,7 +17,7 @@ export class SegmentPage implements OnInit {
   }
 
   segmentChanged(event: any) {
-    console.log(event.detail);
+    this.publisher = event.detail.value;
   }
 
 }
