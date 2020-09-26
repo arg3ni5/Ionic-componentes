@@ -7,7 +7,7 @@ import { PopoverController } from '@ionic/angular';
   styleUrls: ['./popover-info.component.scss'],
 })
 export class PopoverInfoComponent implements OnInit {
-  data = new Array(7);
+  data: any[] = new Array(7);
   constructor(private popoverCtrl: PopoverController) { }
 
   ngOnInit() { }
