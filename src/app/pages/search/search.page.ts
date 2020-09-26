@@ -13,14 +13,12 @@ export class SearchPage implements OnInit {
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    this.dataService.getAlbumes().subscribe(albumes=>{
-      console.log(albumes);
+    this.dataService.getAlbumes().subscribe(albumes => {
       this.albumes = albumes;
-      
+
     })
   }
   onSearchChange(event: any) {
     console.log(event);
-
   }
 }
