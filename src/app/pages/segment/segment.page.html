@@ -45,7 +45,9 @@
         <h3>{{heroe.superhero}} <small>{{heroe.alter_ego}}</small></h3>
         <p>{{heroe.first_appearance}}</p>
       </ion-label>
-      <ion-label slot="end" class="ion-text-right">{{heroe.publisher}}</ion-label>
+      <!-- <ion-label slot="end" class="ion-text-right">{{heroe.publisher}}</ion-label>-->
+      <ion-img slot="end" [src]="heroe.publisher == 'DC Comics' ? '/assets/img/dc-logo.svg':'/assets/img/marvel-logo.png'"
+        style="width: 50px;"></ion-img>
     </ion-item>
   </ion-list>
 </ion-content>
