@@ -14,5 +14,4 @@ export class PopoverInfoComponent implements OnInit {
   onClick(value: number) {
     this.popoverCtrl.dismiss({ item: value });
   }
-
 }
