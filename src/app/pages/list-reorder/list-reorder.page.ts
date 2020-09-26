@@ -7,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListReorderPage implements OnInit {
   personajes: string[] = ['Aquaman', 'Superman', 'Mujer Maravilla', 'Batman', 'Flash'];
-  toogle: boolean = false;
-  constructor() { }
+  reorderDisabled: boolean;
+  constructor() {
+    this.reorderDisabled = true;
+  }
 
   ngOnInit() {
   }
