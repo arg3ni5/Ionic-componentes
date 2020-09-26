@@ -18,8 +18,11 @@ export class PopoverPage implements OnInit {
       component: PopoverInfoComponent,
       event: ev,
       translucent: true,
-      backdropDismiss: true
+      backdropDismiss: false
     });
-    return await popover.present();
+    await popover.present();
+    const { data } = await popover.onWillDismiss();
+    console.log(data);
+
   }
 }
